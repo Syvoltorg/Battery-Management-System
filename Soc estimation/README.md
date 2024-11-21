@@ -1,11 +1,11 @@
-# SOC Estimation Project
+# SOC Estimation with Efficiency Comparison
 
-This MATLAB project estimates the **State of Charge (SOC)** of a battery under variable load conditions influenced by total weight and user-defined speed profiles.
+This MATLAB project estimates the **State of Charge (SOC)** of a battery under variable load and compares the efficiency of a user-defined speed profile with an optimal speed profile.
 
 ## Features
-- Dynamically calculates SOC over time based on speed and load.
-- User inputs either a constant or variable speed profile.
-- Visualizes SOC trends, speed profiles, and time to full discharge.
+- Dynamically calculates SOC over time for both user and optimal profiles.
+- Estimates battery efficiency as a percentage based on runtime comparison.
+- Visualizes SOC trends, efficiency metrics, and speed profiles.
 
 ## Prerequisites
 - MATLAB R2020b or later.
