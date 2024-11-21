@@ -5,13 +5,18 @@ Analysing the battery performance of EV's
 This project involves the design and development of a Battery Management System (BMS) aimed at efficiently monitoring, managing, and optimizing battery performance. The system ensures safety, reliability, and extended lifespan for batteries used in various applications such as e-vehicles, energy storage systems, and portable devices.
 
 # Features
+
 State of Charge (SoC) Calculation: Accurate estimation of the battery's charge percentage.
+
 Temperature Sensing: Ensures battery cells operate within safe temperature ranges.
 
 # Applications
 Electric vehicles (EVs)
+
 Renewable energy storage systems
+
 Consumer electronics
+
 Industrial battery packs
 
 # Prerequisites
