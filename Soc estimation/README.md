@@ -13,5 +13,5 @@ This MATLAB project estimates the **State of Charge (SOC)** of a battery under v
 ## How to Use
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/SOC_Estimation_Project.git
-   cd SOC_Estimation_Project
+   git clone https://github.com/Syvoltorg/SOC Estimation under variable load with weight and speed.m
+   cd SOC Estimation under variable load with weight and speed.m
