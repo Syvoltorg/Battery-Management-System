@@ -21,12 +21,16 @@ Industrial battery packs
 
 # Prerequisites
 To build and run this project, you need the following:
+
 Simulation tool: MATLAB 
 
 # Contribution
 Contributions are welcome! If you would like to contribute, please:
+
 Fork the repository.
+
 Create a feature branch.
+
 Submit a pull request with a detailed description of your changes.
 
 # License
@@ -34,10 +38,15 @@ This project is licensed under the GNU General Public License v3.0.
 
 # Acknowledgements
 Team Members: 
+
 Srujan M N 
+
 Vismaya Udagatti
+
 Yashaswini Mohan
+
 Yogeetha D
+
 
 Special thanks to Dhruv Gupta, ARCnet, IISc.
 
