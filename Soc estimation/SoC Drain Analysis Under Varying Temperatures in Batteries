@@ -1,0 +1,57 @@
+% SOC_Drain_Comparison.m
+% This script calculates and compares the State of Charge (SoC) drain of a 
+% battery under normal (25°C) and temperature-dependent conditions for 
+% 2-hour continuous cycling.
+
+% Written for educational purposes and suitable for sharing on GitHub.
+
+% PARAMETERS
+initial_soc = 100; % Initial state of charge (fully charged at 100%)
+time_hours = 0:0.5:2; % Time in hours (up to 2 hours with half-hour intervals)
+temperature_range = 20:5:50; % Temperature range from 20°C to 50°C in 5°C steps
+normal_temperature = 25; % Normal operating temperature in °C
+
+% Battery specifications
+battery_capacity = 10; % Battery capacity in Ah
+voltage = 36; % Rated voltage in volts
+normal_discharge_rate = 1 / (battery_capacity * 2); % Base discharge rate for 2 hours of continuous cycling at 25°C
+temperature_discharge_factor = 0.002; % Additional SoC discharge factor per °C
+
+% Adjust the normal discharge rate for the normal temperature
+normal_discharge_rate = normal_discharge_rate + temperature_discharge_factor * (normal_temperature - 20);
+
+% INITIALIZATION
+% Initialize arrays to store results
+soc_normal = initial_soc * exp(-normal_discharge_rate * time_hours); % SoC under normal operation (25°C)
+soc_temp_dependant = zeros(length(time_hours), length(temperature_range)); % SoC under temperature-dependent operation
+
+% TEMPERATURE-DEPENDENT CALCULATIONS
+for j = 1:length(temperature_range)
+    current_temp = temperature_range(j);
+    % Combined discharge rate for temperature-dependent operation
+    discharge_rate = normal_discharge_rate + temperature_discharge_factor * (current_temp - normal_temperature);
+    soc_temp_dependant(:, j) = initial_soc * exp(-discharge_rate * time_hours);
+end
+
+% PLOTTING THE RESULTS
+figure;
+
+% Plot SoC under normal operation
+plot(time_hours, soc_normal, 'k--', 'LineWidth', 2);
+hold on;
+
+% Plot SoC under temperature-dependent operation for each temperature
+for j = 1:length(temperature_range)
+    plot(time_hours, soc_temp_dependant(:, j), 'LineWidth', 1.5);
+end
+
+% Add labels, title, and legend
+xlabel('Time (hours)');
+ylabel('State of Charge (SoC)');
+title('SoC Drain Comparison: Normal (25°C) vs. Temperature-Dependent Operation');
+legend(['Normal Operation (25°C)', ...
+    arrayfun(@(x) sprintf('Temp = %d°C', x), temperature_range, 'UniformOutput', false)]);
+grid on;
+hold off;
+
+% --- END OF SCRIPT ---
