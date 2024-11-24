@@ -1,4 +1,5 @@
 % SOC_Estimation.m
+% Version: 1.0
 % Script for State of Charge (SOC) estimation under variable load
 % based on weight and user-defined speed profile.
 
