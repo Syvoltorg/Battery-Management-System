@@ -1,4 +1,5 @@
 % SOC_Estimation_with_Efficiency.m
+% Version: 1.0
 % Script for State of Charge (SOC) estimation under variable load 
 % and efficiency comparison between user input speed profile and optimal profile.
 
