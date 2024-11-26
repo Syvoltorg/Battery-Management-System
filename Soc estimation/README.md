@@ -83,10 +83,3 @@ This script simulates the SoC reduction of an EV battery based on distances trav
 #### Outputs:
 - Bar chart comparing SoC at the start and after traveling on different road types.
 - SoC reduction values annotated on the chart.
-
-## How to Use
-
-### Clone the repository:
-```bash
-git clone https://github.com/Syvoltorg/SoC-Estimation-under-variable-load-with-weight-and-speed.m
-cd SoC-Estimation-under-variable-load-with-weight-and-speed.m
